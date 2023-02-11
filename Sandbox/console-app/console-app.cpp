@@ -42,6 +42,18 @@ int main()
     std::cout << "Integers[2] : " << Integers[2] << "\n";
     float Numbers[3] = { 1.0 };
     std::cout << "Numbers[0] : " << Numbers[0] << ", Numbers[1] : " << Numbers[1] << "\n";
+
+    float NumbersSum = 0.0;
+    for (int Index = 0; Index < 3; ++Index)
+    {
+        NumbersSum = NumbersSum + Numbers[Index];
+    }
+    std::cout << "NumbersSum : " << NumbersSum << "\n";
+    while (Integers[4] > 0)
+    {
+        Integers[4] = Integers[4] - 1;
+    }
+    std::cout << "Integers[4] after while() : " << Integers[4] << "\n";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
