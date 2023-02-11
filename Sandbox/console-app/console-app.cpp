@@ -3,6 +3,21 @@
 
 #include <iostream>
 
+void MakeItZero(int Integer)
+{
+    Integer = 0;
+}
+
+void MakeItZeroWithPointer(int* Integer)
+{
+    *Integer = 0;
+}
+
+void MakeItZeroWithReference(int& Integer)
+{
+    Integer = 0;
+}
+
 int main()
 {
     std::cout << "Hello World!\n";
@@ -54,6 +69,20 @@ int main()
         Integers[4] = Integers[4] - 1;
     }
     std::cout << "Integers[4] after while() : " << Integers[4] << "\n";
+
+    {
+        int IntegerA = 10;
+        MakeItZero(IntegerA);
+        std::cout << "IntegerA after MakeItZero() : " << IntegerA << "\n";
+
+        IntegerA = 10;
+        MakeItZeroWithPointer(&IntegerA);
+        std::cout << "IntegerA after MakeItZeroWithPointer() : " << IntegerA << "\n";
+
+        IntegerA = 10;
+        MakeItZeroWithReference(IntegerA);
+        std::cout << "IntegerA after MakeItZeroWithReference() : " << IntegerA << "\n";
+    }
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
