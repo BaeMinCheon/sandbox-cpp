@@ -20,6 +20,17 @@ int main()
     {
         std::cout << "It is false\n";
     }
+
+    bool ConditionA = true;
+    bool ConditionB = false;
+    if (ConditionA && ConditionB)
+    {
+        std::cout << "Never visited\n";
+    }
+    if (ConditionA || ConditionB)
+    {
+        std::cout << "ConditionA or ConditionB is true\n";
+    }
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
