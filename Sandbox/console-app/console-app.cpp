@@ -6,6 +6,20 @@
 int main()
 {
     std::cout << "Hello World!\n";
+
+    if (true)
+    {
+        std::cout << "It is true\n";
+    }
+
+    if (false)
+    {
+        std::cout << "Never visited\n";
+    }
+    else
+    {
+        std::cout << "It is false\n";
+    }
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
