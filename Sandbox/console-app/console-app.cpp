@@ -31,6 +31,17 @@ int main()
     {
         std::cout << "ConditionA or ConditionB is true\n";
     }
+
+    bool Conditions[3];
+    Conditions[0] = true;
+    if (Conditions[0])
+    {
+        std::cout << "Conditions[0] is true\n";
+    }
+    int Integers[5] = { 1, 2, 3, 4, 5 };
+    std::cout << "Integers[2] : " << Integers[2] << "\n";
+    float Numbers[3] = { 1.0 };
+    std::cout << "Numbers[0] : " << Numbers[0] << ", Numbers[1] : " << Numbers[1] << "\n";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
