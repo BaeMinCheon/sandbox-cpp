@@ -87,35 +87,27 @@ int main()
 
     {
         Item ItemA;
-        std::cout << "ItemA.Name : " << ItemA.Name << "\n";
-        std::cout << "ItemA.Description : " << ItemA.Description << "\n";
-        std::cout << "ItemA.Quantity : " << ItemA.Quantity << "\n";
-        std::cout << "ItemA.Weight : " << ItemA.Weight << "\n";
+        std::cout << "[ItemA Information]\n";
+        ItemA.PrintInformation();
     }
 
     {
-        Item ItemB;
-        ItemB.Name = "Coin";
-        std::cout << "ItemB.Name : " << ItemB.Name << "\n";
-        ItemB.Description = "A currency for trade.";
-        std::cout << "ItemB.Description : " << ItemB.Description << "\n";
-        ItemB.Quantity = 100;
-        std::cout << "ItemB.Quantity : " << ItemB.Quantity << "\n";
-        ItemB.Weight = 0.1;
-        std::cout << "ItemB.Weight : " << ItemB.Weight << "\n";
+        Item ItemB("Coin", "A currency for trade.", 100, 0.1);
+        std::cout << "[ItemB Information]\n";
+        ItemB.PrintInformation();
     }
 
     {
-        UsableItem ItemC;
-        ItemC.Name = "Cookie";
-        std::cout << "ItemC.Name : " << ItemC.Name << "\n";
+        UsableItem ItemC("Cookie", "Cookie", 1, 0.1);
+        std::cout << "[ItemC Information]\n";
+        ItemC.PrintInformation();
         ItemC.Use();
     }
 
     {
-        EquipableItem ItemD;
-        ItemD.Name = "Hat";
-        std::cout << "ItemD.Name : " << ItemD.Name << "\n";
+        EquipableItem ItemD("Hat", "Hat", 1, 1.0);
+        std::cout << "[ItemD Information]\n";
+        ItemD.PrintInformation();
         ItemD.Equip();
     }
 }
