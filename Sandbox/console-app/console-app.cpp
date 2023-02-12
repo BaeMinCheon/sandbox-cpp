@@ -110,6 +110,30 @@ int main()
         ItemD.PrintInformation();
         ItemD.Equip();
     }
+
+    {
+        Item ItemE;
+        UsableItem ItemF;
+        Item* PointerA = &ItemE;
+        PointerA->PrintInformation();
+        PointerA = &ItemF;
+        PointerA->PrintInformation();
+        //UsableItem* PointerB = &ItemE;
+    }
+
+    {
+        Item ItemE;
+        UsableItem ItemF;
+        Item* PointerA = &ItemE;
+        PointerA->NonVirtualFunc();
+        PointerA->VirtualFunc();
+        PointerA = &ItemF;
+        PointerA->NonVirtualFunc();
+        PointerA->VirtualFunc();
+        UsableItem* PointerB = &ItemF;
+        PointerB->NonVirtualFunc();
+        PointerB->VirtualFunc();
+    }
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
