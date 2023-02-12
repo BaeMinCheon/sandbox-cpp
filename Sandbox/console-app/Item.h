@@ -1,9 +1,11 @@
 #pragma once
 
 #include <string>
+#include <iostream>
 
-struct Item
+class Item
 {
+public:
 	std::string Name = "Default";
 	std::string Description = "This is a default item.";
 	int Quantity = 1;
