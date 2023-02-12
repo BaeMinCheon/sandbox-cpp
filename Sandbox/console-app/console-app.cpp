@@ -19,6 +19,19 @@ void MakeItZeroWithReference(int& Integer)
     Integer = 0;
 }
 
+template<typename T>
+T TemplateMax(T ValueA, T ValueB)
+{
+    if (ValueA > ValueB)
+    {
+        return ValueA;
+    }
+    else
+    {
+        return ValueB;
+    }
+}
+
 int main()
 {
     std::cout << "Hello World!\n";
@@ -133,6 +146,20 @@ int main()
         UsableItem* PointerB = &ItemF;
         PointerB->NonVirtualFunc();
         PointerB->VirtualFunc();
+    }
+
+    {
+        int IntegerA = 5;
+        int IntegerB = 10;
+        int IntegerC = TemplateMax(IntegerA, IntegerB);
+        std::cout << "TemplateMax(IntegerA, IntegerB) : " << IntegerC << "\n";
+    }
+
+    {
+        float NumberA = -1.0;
+        float NumberB = 2.0;
+        float NumberC = TemplateMax(NumberA, NumberB);
+        std::cout << "TemplateMax(NumberA, NumberB) : " << NumberC << "\n";
     }
 }
 
