@@ -104,6 +104,20 @@ int main()
         ItemB.Weight = 0.1;
         std::cout << "ItemB.Weight : " << ItemB.Weight << "\n";
     }
+
+    {
+        UsableItem ItemC;
+        ItemC.Name = "Cookie";
+        std::cout << "ItemC.Name : " << ItemC.Name << "\n";
+        ItemC.Use();
+    }
+
+    {
+        EquipableItem ItemD;
+        ItemD.Name = "Hat";
+        std::cout << "ItemD.Name : " << ItemD.Name << "\n";
+        ItemD.Equip();
+    }
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
