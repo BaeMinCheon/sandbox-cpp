@@ -161,6 +161,13 @@ int main()
         float NumberC = TemplateMax(NumberA, NumberB);
         std::cout << "TemplateMax(NumberA, NumberB) : " << NumberC << "\n";
     }
+
+    {
+        Item ItemG("ItemG", "Test item G", 5, 1.0);
+        Item ItemH("ItemH", "Test item H", 10, 0.1);
+        Item ItemI = TemplateMax(ItemG, ItemH);
+        ItemI.PrintInformation();
+    }
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

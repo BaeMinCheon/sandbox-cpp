@@ -37,6 +37,11 @@ public:
 		std::cout << "Item::VirtualFunc()\n";
 	}
 
+	bool operator>(Item& Other)
+	{
+		return Quantity > Other.Quantity;
+	}
+
 protected:
 	std::string Name = "Default";
 	std::string Description = "This is a default item.";
